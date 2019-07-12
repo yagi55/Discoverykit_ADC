@@ -1,0 +1,8 @@
+- This is my sample code of 3ch ADCs functions for B-L072Z-LRWAN1 LoRa®/Sigfox™ Discovery kit.
+- In each timer interruption of TIM2, ADC functions are worked and get 256 value in each channel. 
+- ADC data are transferred by DMA function.
+- Using adc0(PIN1 of CN6), adc4(PIN3 of CN6) and adc5(PIN7 of CN3) for ADC channels.
+[Problem]
+- Single channel A/D conversion feature seems to be no problem but it always affects other ADC channels value. 
+  For example, only 1v analog input is loaded in adc0, it always affects adc4 and adc5 output value in some extent.
+  Each adc pin configured pulled down.
